@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KIR J. SOBOLEV</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- <div class="bg"></div>  -->
+  <div class="bg" aria-hidden="true">
+    <video
+      class="bg__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="auto"
+      poster="./assets/img/bg-red.jpg"
+    >
+      <source src="./assets/video/bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <main class="page page--home">
+    <header class="topbar">
+      <nav class="nav">
+        <a class="nav__link" href="#" data-open="concerts">КОНЦЕРТЫ</a>
+        <a class="nav__link" href="#" data-open="music">МУЗЫКА</a>
+        <a class="nav__link" href="#" data-open="contacts">КОНТАКТЫ</a>
+      </nav>
+
+      <div class="social">
+
+        <a
+          class="social__link"
+          href="https://t.me/kjsobolev"
+          aria-label="Telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 30 30" aria-hidden="true">
+            <path d="M15 2.5C8.1 2.5 2.5 8.1 2.5 15C2.5 21.9 8.1 27.5 15 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 15 2.5ZM20.8 11C20.6125 12.975 19.8 17.775 19.3875 19.9875C19.2125 20.925 18.8625 21.2375 18.5375 21.275C17.8125 21.3375 17.2625 20.8 16.5625 20.3375C15.4625 19.6125 14.8375 19.1625 13.775 18.4625C12.5375 17.65 13.3375 17.2 14.05 16.475C14.2375 16.2875 17.4375 13.375 17.5 13.1125C17.5087 13.0727 17.5075 13.0315 17.4966 12.9923C17.4857 12.953 17.4654 12.9171 17.4375 12.8875C17.3625 12.825 17.2625 12.85 17.175 12.8625C17.0625 12.8875 15.3125 14.05 11.9 16.35C11.4 16.6875 10.95 16.8625 10.55 16.85C10.1 16.8375 9.25 16.6 8.6125 16.3875C7.825 16.1375 7.2125 16 7.2625 15.5625C7.2875 15.3375 7.6 15.1125 8.1875 14.875C11.8375 13.2875 14.2625 12.2375 15.475 11.7375C18.95 10.2875 19.6625 10.0375 20.1375 10.0375C20.2375 10.0375 20.475 10.0625 20.625 10.1875C20.75 10.2875 20.7875 10.425 20.8 10.525C20.7875 10.6 20.8125 10.825 20.8 11Z"/>
+          </svg>
+        </a>
+
+        <a
+          class="social__link"
+          href="https://www.instagram.com/sobolev10q/"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 30 30" aria-hidden="true">
+            <path d="M16.285 2.5C17.6912 2.50375 18.405 2.51125 19.0212 2.52875L19.2637 2.5375C19.5437 2.5475 19.82 2.56 20.1537 2.575C21.4837 2.6375 22.3912 2.8475 23.1875 3.15625C24.0125 3.47375 24.7075 3.90375 25.4025 4.5975C26.0383 5.22217 26.5302 5.97809 26.8437 6.8125C27.1525 7.60875 27.3625 8.51625 27.425 9.8475C27.44 10.18 27.4525 10.4563 27.4625 10.7375L27.47 10.98C27.4887 11.595 27.4962 12.3088 27.4987 13.715L27.5 14.6475V16.285C27.503 17.1968 27.4934 18.1085 27.4712 19.02L27.4637 19.2625C27.4537 19.5437 27.4412 19.82 27.4262 20.1525C27.3637 21.4837 27.1512 22.39 26.8437 23.1875C26.5302 24.0219 26.0383 24.7778 25.4025 25.4025C24.7778 26.0384 24.0219 26.5302 23.1875 26.8438C22.3912 27.1525 21.4837 27.3625 20.1537 27.425L19.2637 27.4625L19.0212 27.47C18.405 27.4875 17.6912 27.4963 16.285 27.4988L15.3525 27.5H13.7162C12.8041 27.5032 11.8919 27.4936 10.98 27.4712L10.7375 27.4638C10.4407 27.4525 10.1441 27.4396 9.84748 27.425C8.51748 27.3625 7.60998 27.1525 6.81248 26.8438C5.97852 26.5301 5.22303 26.0382 4.59873 25.4025C3.96241 24.778 3.47011 24.022 3.15623 23.1875C2.84748 22.3912 2.63748 21.4837 2.57498 20.1525L2.53748 19.2625L2.53123 19.02C2.50819 18.1085 2.49777 17.1968 2.49998 16.285V13.715C2.49652 12.8033 2.50569 11.8915 2.52748 10.98L2.53623 10.7375C2.54623 10.4563 2.55873 10.18 2.57373 9.8475C2.63623 8.51625 2.84623 7.61 3.15498 6.8125C3.4696 5.97775 3.96276 5.2218 4.59998 4.5975C5.22392 3.96194 5.97896 3.47009 6.81248 3.15625C7.60998 2.8475 8.51623 2.6375 9.84748 2.575C10.18 2.56 10.4575 2.5475 10.7375 2.5375L10.98 2.53C11.8915 2.50779 12.8032 2.49821 13.715 2.50125L16.285 2.5ZM15 8.75C13.3424 8.75 11.7527 9.40848 10.5806 10.5806C9.40846 11.7527 8.74998 13.3424 8.74998 15C8.74998 16.6576 9.40846 18.2473 10.5806 19.4194C11.7527 20.5915 13.3424 21.25 15 21.25C16.6576 21.25 18.2473 20.5915 19.4194 19.4194C20.5915 18.2473 21.25 16.6576 21.25 15C21.25 13.3424 20.5915 11.7527 19.4194 10.5806C18.2473 9.40848 16.6576 8.75 15 8.75ZM15 11.25C15.4924 11.2499 15.9801 11.3468 16.4351 11.5352C16.8901 11.7236 17.3035 11.9997 17.6518 12.3479C18.0001 12.6961 18.2764 13.1094 18.4649 13.5644C18.6534 14.0193 18.7505 14.5069 18.7506 14.9994C18.7507 15.4918 18.6538 15.9795 18.4654 16.4345C18.277 16.8895 18.0009 17.3029 17.6527 17.6512C17.3045 17.9995 16.8912 18.2758 16.4362 18.4643C15.9813 18.6528 15.4937 18.7499 15.0012 18.75C14.0067 18.75 13.0528 18.3549 12.3496 17.6517C11.6463 16.9484 11.2512 15.9946 11.2512 15C11.2512 14.0054 11.6463 13.0516 12.3496 12.3483C13.0528 11.6451 14.0067 11.25 15.0012 11.25M21.5637 6.875C21.1493 6.875 20.7519 7.03962 20.4589 7.33265C20.1658 7.62567 20.0012 8.0231 20.0012 8.4375C20.0012 8.8519 20.1658 9.24933 20.4589 9.54235C20.7519 9.83538 21.1493 10 21.5637 10C21.9781 10 22.3756 9.83538 22.6686 9.54235C22.9616 9.24933 23.1262 8.8519 23.1262 8.4375C23.1262 8.0231 22.9616 7.62567 22.6686 7.33265C22.3756 7.03962 21.9781 6.875 21.5637 6.875Z"/>
+          </svg>
+        </a>
+        
+        <a
+          class="social__link"
+          href="#"
+          aria-label="YouTube"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 30 30" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15 5C16.0688 5 17.165 5.0275 18.2275 5.0725L19.4825 5.1325L20.6838 5.20375L21.8088 5.28L22.8362 5.36C23.9515 5.44486 25.001 5.92054 25.7999 6.70325C26.5989 7.48596 27.096 8.52549 27.2038 9.63875L27.2537 10.17L27.3475 11.3075C27.435 12.4862 27.5 13.7713 27.5 15C27.5 16.2287 27.435 17.5138 27.3475 18.6925L27.2537 19.83L27.2038 20.3612C27.096 21.4747 26.5987 22.5144 25.7995 23.2971C25.0003 24.0799 23.9505 24.5554 22.835 24.64L21.81 24.7187L20.685 24.7962L19.4825 24.8675L18.2275 24.9275C17.1523 24.9741 16.0762 24.9982 15 25C13.9238 24.9982 12.8477 24.9741 11.7725 24.9275L10.5175 24.8675L9.31625 24.7962L8.19125 24.7187L7.16375 24.64C6.04852 24.5551 4.999 24.0795 4.20006 23.2967C3.40111 22.514 2.90399 21.4745 2.79625 20.3612L2.74625 19.83L2.6525 18.6925C2.55729 17.4639 2.50642 16.2323 2.5 15C2.5 13.7713 2.565 12.4862 2.6525 11.3075L2.74625 10.17L2.79625 9.63875C2.90395 8.52569 3.40089 7.48632 4.19958 6.70363C4.99827 5.92095 6.04749 5.44515 7.1625 5.36L8.18875 5.28L9.31375 5.20375L10.5163 5.1325L11.7712 5.0725C12.8469 5.02591 13.9234 5.00174 15 5ZM12.5 11.9687V18.0313C12.5 18.6088 13.125 18.9687 13.625 18.6812L18.875 15.65C18.9892 15.5842 19.0841 15.4895 19.1501 15.3754C19.2161 15.2613 19.2508 15.1318 19.2508 15C19.2508 14.8682 19.2161 14.7387 19.1501 14.6246C19.0841 14.5105 18.9892 14.4158 18.875 14.35L13.625 11.32C13.5109 11.2542 13.3816 11.2195 13.2499 11.2195C13.1182 11.2195 12.9888 11.2542 12.8748 11.3201C12.7608 11.386 12.6661 11.4808 12.6003 11.5948C12.5345 11.7089 12.4999 11.8383 12.5 11.97V11.9687Z"
+            />
+          </svg>
+        </a>
+        
+        <a
+          class="social__link"
+          href="#"
+          aria-label="Tiktok"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 30 30" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.36364 3C6.20633 3 5.09642 3.45974 4.27808 4.27808C3.45974 5.09642 3 6.20633 3 7.36364V22.6364C3 23.7937 3.45974 24.9036 4.27808 25.7219C5.09642 26.5403 6.20633 27 7.36364 27H22.6364C23.7937 27 24.9036 26.5403 25.7219 25.7219C26.5403 24.9036 27 23.7937 27 22.6364V7.36364C27 6.20633 26.5403 5.09642 25.7219 4.27808C24.9036 3.45974 23.7937 3 22.6364 3H7.36364ZM15.3709 6.81818H17.9749C17.9749 8.56364 19.4498 10.5382 21.6949 10.5382V13.1411C20.1491 13.0342 18.828 12.7811 17.9749 12.0251V18.7189C17.9749 20.5789 16.5044 23.1818 13.1411 23.1818C9.03273 23.1818 8.30618 19.4618 8.30618 18.3469C8.30618 17.232 8.96073 13.512 13.512 13.512V16.116C12.3218 15.864 10.9091 16.8589 10.9091 18.3469C10.9091 20.2069 12.0251 20.5789 13.1411 20.5789C14.2571 20.5789 15.372 19.4629 15.372 18.3469L15.3709 6.81818Z"/>            />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero__center">
+        <div class="hero__label">НОВЫЙ СИНГЛ</div>
+        <div class="hero__title">“VIEWPOINT”</div>
+
+        <a
+          class="play"
+          href="https://band.link/RfqdT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Listen on band.link"
+        >
+          <span class="play__circle"></span>
+          <span class="play__triangle"></span>
+        </a>  
+      </div>
+
+      <div class="artist">
+        <div class="artist__line1">KIR J.</div>
+        <div class="artist__line2">SOBOLEV</div>
+      </div>
+
+      <div class="copyright">© 2026 KJS MUSIC PRODUCTION</div>
+    </section>
+  </main>
+
+  <!-- OVERLAY: MUSIC -->
+  <div class="overlay" id="overlay-music" aria-hidden="true">
+    <div class="overlay__bg" data-close="music"></div>
+
+    <div class="overlay__card" role="dialog" aria-label="Музыка">
+      <h1 class="overlay__title">МУЗЫКА</h1>
+
+      <div class="music__platforms">
+        <a
+          href="https://music.apple.com/artist/kir-j-sobolev/1867563031"
+          class="music__platform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apple Music
+        </a>
+
+        <a
+          href="https://open.spotify.com/artist/47ZW7QAt01SlV7r6n4rvh8"
+          class="music__platform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Spotify
+        </a>
+
+        <a
+          href="https://zvuk.com/artist/214049051"
+          class="music__platform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Звук
+        </a>
+
+        <a
+          href="https://music.yandex.ru/artist/25238525"
+          class="music__platform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Яндекс Музыка
+        </a>
+
+        <a
+          href="https://vk.com/artist/kirj_sobolev"
+          class="music__platform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VK Музыка
+        </a>
+      </div>
+
+      <div class="releases">
+        <article class="release">
+          <img class="release__cover" src="./assets/img/release-viewpoint.jpg" alt="Viewpoint — Single">
+          <div class="release__name">Viewpoint — Single</div>
+          <div class="release__meta">2026</div>
+
+          <a
+            class="release__btn"
+            href="https://band.link/RfqdT"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Слушать
+          </a>
+        </article>
+
+        <article class="release">
+          <img class="release__cover" src="./assets/img/release-these-things-do-happen.jpg" alt="These Things Do Happen — Single">
+          <div class="release__name">These Things Do Happen — Single</div>
+          <div class="release__meta">Релиз: 17 января 2026</div>
+
+          <a
+            class="release__btn"
+            href="https://band.link/PRgQn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Пресейв
+          </a>
+        </article>
+
+        <article class="release release--upcoming">
+          <img class="release__cover" src="./assets/img/release-the-sun-is-always-above.jpg" alt="The Sun Is Always Above — Single">
+          <div class="release__name">The Sun Is Always Above — Single</div>
+          <div class="release__meta">Релиз: Скоро</div>
+          
+          <a
+            class="release__btn"
+            href="https://band.link/ВАША_ССЫЛКА"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Пресейв
+          </a>
+          
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <!-- OVERLAY: CONCERTS -->
+  <div class="overlay" id="overlay-concerts" aria-hidden="true">
+    <div class="overlay__bg" data-close="concerts"></div>
+
+    <div class="overlay__card overlay__card--centered" role="dialog" aria-label="Концерты">
+      <h1 class="overlay__title">КОНЦЕРТЫ</h1>
+
+      <div class="contacts">
+        <p class="contacts__text">
+          Пока концерты не&nbsp;запланированы.
+          Подпишитесь на&nbsp;соцсети, чтобы не&nbsp;пропустить анонсы будущих выступлений.
+        </p>
+
+        <a class="contacts__link" href="#social" data-close="concerts">
+          Перейти к соцсетям
+        </a>
+      </div>
+
+      <!-- <div class="concerts">
+        <div class="concerts__row">
+          <div>18 апр</div>
+          <div><strong>Санкт-Петербург</strong></div>
+          <div>Космонавт</div>
+          <div><a class="concerts__btn" href="#" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
+        </div>
+
+        <div class="concerts__row">
+          <div>3 мая</div>
+          <div><strong>Москва</strong></div>
+          <div>Лужники</div>
+          <div><a class="concerts__btn" href="#" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
+        </div>
+
+        <div class="concerts__row">
+          <div>12 июня</div>
+          <div><strong>Самара</strong></div>
+          <div>МТЛ Арена</div>
+          <div><a class="concerts__btn" href="#" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
+        </div>
+
+        <div class="concerts__row">
+          <div>23 июня</div>
+          <div><strong>Панган, Таиланд</strong></div>
+          <div>Foolmoon Party</div>
+          <div><a class="concerts__btn" href="#" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
+        </div>
+
+        <div class="concerts__row">
+          <div>11 июля</div>
+          <div><strong>Аланья, Турция</strong></div>
+          <div>Alanium Mall</div>
+          <div><a class="concerts__btn" href="#" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
+        </div>
+      </div>  -->
+    </div>
+  </div>
+
+  <!-- OVERLAY: CONTACTS -->
+  <div class="overlay" id="overlay-contacts" aria-hidden="true">
+    <div class="overlay__bg" data-close="contacts"></div>
+
+    <div class="overlay__card overlay__card--centered" role="dialog" aria-label="Контакты">
+      <h1 class="overlay__title">КОНТАКТЫ</h1>
+
+      <div class="contacts">
+        <p class="contacts__text">
+          Отправляйте предложения по&nbsp;сотрудничеству, выступлениям, коллаборациям и&nbsp;любым другим движам.
+        </p>
+
+        <a class="contacts__link" href="https://t.me/kjsobolev" target="_blank" rel="noopener noreferrer">
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
