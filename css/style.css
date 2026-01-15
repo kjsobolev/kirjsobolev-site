@@ -152,6 +152,8 @@ body {
   z-index: 1;
   min-height: calc(100vh - 88px);
   min-height: calc(100dvh - 88px);
+
+  padding-bottom: 510px;
 }
 
 .hero__center {
@@ -496,6 +498,12 @@ body {
 
 
 /* ========== Responsive ========== */
+@media (max-width: 1080px) {
+  .releases {
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .topbar {
     flex-direction: column;
@@ -523,6 +531,7 @@ body {
     transform: translateX(-50%);
     text-align: center;
     font-size: 12px;
+    white-space: nowrap;
   }
 
   .nav__link {
