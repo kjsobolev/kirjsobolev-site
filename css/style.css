@@ -168,11 +168,20 @@ body {
   text-align: center;
   gap: 18px; /* расстояние между строками и кнопкой */
 
-  transform: translateY(-80px); /* поднимаем блок вверх */
+  transform: translateY(-90px); /* поднимаем блок вверх */
 }
 
 /* Center: new single */
-.hero__label,
+.hero__label {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;      /* Inter Black */
+  font-size: 20px;       /* from you */
+  letter-spacing: 0.06em;/* 8% */
+  opacity: 0.98;
+  margin: 0;
+  line-height: 0.2;
+}
+
 .hero__title {
   font-family: "Inter", sans-serif;
   font-weight: 900;      /* Inter Black */
@@ -180,7 +189,7 @@ body {
   letter-spacing: 0.08em;/* 8% */
   opacity: 0.98;
   margin: 0;
-  line-height: 0.6;
+  line-height: 1.3;
 }
 
 /* ========== Play button ========== */
