@@ -37,7 +37,8 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: #000;
+  background: transparent;
+  overflow: hidden; /* важно: body НЕ скроллится */
 }
 
 body {
@@ -56,8 +57,10 @@ body {
 .page--home {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
-  min-height: 100dvh;
+
+  height: 100dvh;            /* фиксируем экран */
+  overflow-y: auto;          /* скролл тут */
+  -webkit-overflow-scrolling: touch; /* плавная инерция */
 }
 
 .topbar {
@@ -68,18 +71,18 @@ body {
 .bg {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1; /* важно */
   overflow: hidden;
   pointer-events: none; /* чтобы клики проходили по сайту */
 }
 
 .bg__video {
   position: absolute;
-  inset: -8vh;          /* тот же “запас” от резинки на мобиле */
-  width: calc(100% + 16vh);
-  height: calc(100% + 16vh);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transform: translateZ(0); /* стабилизация */
+  transform: translateZ(0);
 }
 
 .bg::after {
@@ -203,35 +206,17 @@ body {
   margin-top: 8px;
 }
 
-.play__circle {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
+.play__svg {
+  width: 110px;
+  height: 110px;
+  display: block;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.play__triangle {
-  position: absolute;
-  top: 50%;
-  left: 53%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 26px solid #5a0a0a;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.play:hover .play__circle {
+/* Hover */
+.play:hover .play__svg {
   transform: scale(1.05);
   filter: brightness(0.95);
-}
-
-.play:hover .play__triangle {
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* Artist text */

@@ -1,17 +1,17 @@
 function openOverlay(name) {
   const el = document.getElementById(`overlay-${name}`);
   if (!el) return;
+
   el.classList.add("is-open");
   el.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
 }
 
 function closeOverlay(name) {
   const el = document.getElementById(`overlay-${name}`);
   if (!el) return;
+
   el.classList.remove("is-open");
   el.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
 }
 
 document.addEventListener("click", (e) => {
@@ -24,7 +24,6 @@ document.addEventListener("click", (e) => {
 
   const closeBtn = e.target.closest("[data-close]");
   if (closeBtn) {
-    // можно без preventDefault
     closeOverlay(closeBtn.getAttribute("data-close"));
   }
 });
@@ -37,7 +36,6 @@ document.addEventListener("keydown", (e) => {
 
   opened.classList.remove("is-open");
   opened.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
 });
 
 window.addEventListener("DOMContentLoaded", () => {
