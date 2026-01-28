@@ -40,10 +40,15 @@ document.addEventListener("keydown", (e) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   const v = document.querySelector(".bg__video");
-  if (!v) return;
+  const bg = document.querySelector(".bg");
+  if (!v || !bg) return;
 
   v.muted = true;
   v.playsInline = true;
+
+  v.addEventListener("playing", () => {
+    bg.classList.add("is-playing");
+  }, { once: true });
 
   const p = v.play();
   if (p && typeof p.catch === "function") {
