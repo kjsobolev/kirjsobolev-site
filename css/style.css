@@ -471,12 +471,68 @@ body {
 
 /* ===== Upcoming release (ещё не вышел) ===== */
 
-.release--upcoming .release__cover {
-  opacity: 0.4;              /* обложка ещё бледнее */
+/* Бледная обложка для upcoming и presave */
+.release--upcoming .release__cover,
+.release--presave .release__cover {
+  opacity: 0.4;
 }
 
-.release--upcoming .release__btn {
-  display: none;             /* скрываем кнопку */
+/* Отключаем клики только для upcoming */
+.release--upcoming .release__cover-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Убираем hover затемнение для upcoming */
+.release--upcoming .release__cover-link:hover .release__cover {
+  filter: none;
+}
+
+/* Hover работает для presave */
+.release--presave .release__cover-link:hover .release__cover {
+  filter: brightness(0.65);
+}
+
+/* Обёртка для позиционирования бейджа */
+.release__cover-link {
+  position: relative;
+}
+
+/* Бейдж */
+.release__badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 10px 22px;
+  border-radius: 999px;
+
+  background: rgba(120,120,120,0.75);
+  backdrop-filter: blur(4px);
+
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  display: none;
+}
+
+/* Показываем бейдж для upcoming и presave */
+.release--upcoming .release__badge,
+.release--presave .release__badge {
+  display: block;
+}
+
+/* Бейдж показываем только для upcoming */
+.release__badge {
+  display: none;
+}
+
+.release--upcoming .release__badge {
+  display: block;
 }
 
 
@@ -620,7 +676,17 @@ body {
 
   .releases { 
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px 20px;
+    gap: 16px 16px;
+  }
+
+  .release__name {
+    margin-top: 6px;
+    font-size: 12px;            /* from you */
+  }
+
+  .release__meta {
+    margin-top: 0px;
+    font-size: 12px;            /* from you */
   }
 
 
