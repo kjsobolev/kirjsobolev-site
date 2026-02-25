@@ -222,17 +222,40 @@ body {
   margin-top: 8px;
 }
 
+/* Простое "дыхание" */
+@keyframes play-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
 .play__svg {
   width: 110px;
   height: 110px;
   display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
+
+  transform-origin: center;
+  will-change: transform, opacity;
+
+  animation: play-breathe 3s ease-in-out infinite;
 }
 
-/* Hover */
+/* Hover — то же дыхание, но быстрее + лёгкая подсветка */
 .play:hover .play__svg {
-  transform: scale(1.05);
-  filter: brightness(0.95);
+  animation-duration: 1.6s;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.6));
+}
+
+/* Уважение к reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .play__svg {
+    animation: none;
+  }
 }
 
 /* Artist text */
@@ -314,7 +337,7 @@ body {
   margin: 90px auto;
   background: #fff;
   color: #111;
-  padding: 24px 54px 54px;
+  padding: 34px 54px 54px;
 
   transform: translateY(10px);
   opacity: 0;
@@ -351,8 +374,8 @@ body {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  margin-top: 6px;
-  margin-bottom: 26px;
+  margin-top: -2px;
+  margin-bottom: 32px;
 }
 
 .music__platform {
@@ -362,7 +385,7 @@ body {
   font-weight: 400;           /* Inter Regular */
   font-size: 16px;            /* from you */
   opacity: 0.85;
-  line-height: 16px;
+  line-height: 8px;
   transition: opacity 0.4s ease; /* ← добавили */
 }
 
@@ -373,9 +396,13 @@ body {
 /* Releases grid */
 .releases {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 56px;
-  margin-top:36px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+  margin-top: 36px;
+}
+
+.release {
+  min-width: 0;
 }
 
 .release__cover {
@@ -389,7 +416,11 @@ body {
   margin-top: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 600;           /* Inter SemiBold */
-  font-size: 16px;            /* from you */
+  font-size: 14px;            /* from you */
+
+  white-space: nowrap;      /* запрет переноса */
+  overflow: hidden;         /* скрываем лишнее */
+  text-overflow: ellipsis;  /* добавляем ... */
 }
 
 .release__meta {
@@ -510,7 +541,7 @@ body {
 /* ========== Responsive ========== */
 @media (max-width: 1080px) {
   .releases {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -567,7 +598,7 @@ body {
   .overlay__card { 
     margin: 60px auto; 
     width: calc(100% - 24px); 
-    padding: 34px 28px 34px;
+    padding: 34px 40px 40px;
   }
 
   .overlay__card--centered {
@@ -576,10 +607,8 @@ body {
   }
 
   .releases { 
-    grid-template-columns: 1fr; 
-    gap: 48px
+    grid-template-columns: repeat(2, 1fr); 
   }
-  .music__platforms { margin-top: 12px; margin-bottom: 48px;}
 
 
   .concerts__row {
