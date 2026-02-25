@@ -334,7 +334,7 @@ body {
 .overlay__card {
   position: relative;
   width: min(1160px, calc(100% - 64px));
-  margin: 90px auto;
+  margin: 160px auto;
   background: #fff;
   color: #111;
   padding: 34px 54px 54px;
@@ -602,7 +602,7 @@ body {
 
 .overlay__card--centered {
   margin: auto;
-  top: 35%;
+  top: 30%;
 }
 
 
@@ -610,6 +610,15 @@ body {
 @media (max-width: 1080px) {
   .releases {
   grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .overlay__card {
+  margin: 90px auto;
+  }
+
+  .overlay__card--centered {
+  margin: auto;
+  top: 30%;
   }
 }
 
