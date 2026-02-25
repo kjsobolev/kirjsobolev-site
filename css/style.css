@@ -405,15 +405,27 @@ body {
   min-width: 0;
 }
 
+.release__cover-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
 .release__cover {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  transition: filter 0.25s ease;
+}
+
+/* Лёгкое затемнение */
+.release__cover-link:hover .release__cover {
+  filter: brightness(0.85);
 }
 
 .release__name {
-  margin-top: 14px;
+  margin-top: 8px;
   font-family: "Inter", sans-serif;
   font-weight: 600;           /* Inter SemiBold */
   font-size: 14px;            /* from you */
@@ -598,7 +610,7 @@ body {
   .overlay__card { 
     margin: 60px auto; 
     width: calc(100% - 24px); 
-    padding: 34px 40px 40px;
+    padding: 34px 24px 40px;
   }
 
   .overlay__card--centered {
@@ -607,7 +619,8 @@ body {
   }
 
   .releases { 
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
   }
 
 
