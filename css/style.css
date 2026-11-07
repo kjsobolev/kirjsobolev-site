@@ -105,7 +105,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.08); /* можно 0.12–0.28 подобрать */
+  background: rgba(0,0,0,0.38); /* можно 0.12–0.28 подобрать */
   pointer-events: none;
 }
 
@@ -210,6 +210,27 @@ body {
   margin: 0;
   line-height: 1.3;
 }
+/* Мягкая тень для читаемости текста */
+.hero__label,
+.hero__title {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ========== Hero: Release States ========== */
+
+/* До выхода релиза */
+.hero__center[data-release-state="presave"] .hero__label--play,
+.hero__center[data-release-state="presave"] .play__svg--released,
+.hero__center[data-release-state="presave"] .play__caption--released {
+  display: none;
+}
+
+/* После выхода релиза */
+.hero__center[data-release-state="play"] .hero__label--presave,
+.hero__center[data-release-state="play"] .play__svg--presave,
+.hero__center[data-release-state="play"] .play__caption--presave {
+  display: none;
+}
 
 /* ========== Play button ========== */
 .play {
@@ -220,6 +241,8 @@ body {
   text-decoration: none;
   cursor: pointer;
   margin-top: 8px;
+  transform-origin: center center;
+  animation: play-breathe 3s ease-in-out infinite;
 }
 
 /* Простое "дыхание" */
@@ -241,19 +264,38 @@ body {
 
   transform-origin: center;
   will-change: transform, opacity;
-
-  animation: play-breathe 3s ease-in-out infinite;
 }
 
-/* Hover — то же дыхание, но быстрее + лёгкая подсветка */
-.play:hover .play__svg {
+/* Подпись под кнопкой */
+.play__caption {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+
+  color: #fff;
+  opacity: 0.85;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Hover — дыхание + лёгкая подсветка */
+.play:hover {
   animation-duration: 1.6s;
+}
+
+.play:hover .play__svg {
   filter: drop-shadow(0 0 20px rgba(255,255,255,0.6));
 }
 
 /* Уважение к reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .play__svg {
+  .play {
     animation: none;
   }
 }
@@ -295,6 +337,19 @@ body {
   font-size: 12px;
   opacity: 0.9;
   transform: translateY(-8px);
+}
+
+/* Прокрутка музыкального оверлея */
+#overlay-music {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Положение и высота музыкальной карточки */
+#overlay-music .overlay__card {
+  margin: clamp(24px, 6vh, 64px) auto;
+  max-height: none;
+  overflow: visible;
 }
 
 /* ========== Overlay (Music) ========== */
